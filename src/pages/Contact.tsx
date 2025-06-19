@@ -178,9 +178,7 @@ const Contact = () => {
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-red-500 rounded-full animate-pulse" />
               </div>
             </div>
-            <p className="text-center text-sm opacity-70 mt-4">
-              2GWV+59X Bengaluru, Karnataka • 13°02'43.7"N 77°32'36.5"E
-            </p>
+            
           </div>
         </section>
       </main>

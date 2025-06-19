@@ -108,7 +108,7 @@ const Navigation = () => {
                 aria-label={`Navigate to ${item.name}`}
               >
                 <span className="relative z-10">{item.name}</span>
-                <div className="absolute inset-0 bg-white/5 rounded-lg scale-0 group-hover:scale-110 transition-transform duration-300 -z-0" />
+                <div className="absolute inset-0 bg-grey rounded-lg scale-0 group-hover:scale-110 transition-transform duration-300 -z-0" />
                 <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-500" />
               </Link>
             ))}

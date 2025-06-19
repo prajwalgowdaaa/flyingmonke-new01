@@ -6,19 +6,19 @@ import Footer from '@/components/Footer';
 const Studio = () => {
   const teamMembers = [
     {
-      name: "Arjun Mehta",
+      name: "Prajwal Gowda",
       role: "Principal Architect",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+      image: "https://images.pexels.com/photos/32193076/pexels-photo-32193076.jpeg?auto=compress"
     },
     {
-      name: "Priya Sharma",
-      role: "Design Director",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face"
+      name: "Suhas",
+      role: "Architect",
+      image: "https://images.pexels.com/photos/32388468/pexels-photo-32388468.jpeg?auto=compress"
     },
     {
-      name: "Rohan Kumar",
-      role: "Project Manager",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
+      name: "Sakshi",
+      role: "Architect",
+      image: "https://images.pexels.com/photos/32388223/pexels-photo-32388223.jpeg?auto=compress"
     }
   ];
 
@@ -123,7 +123,7 @@ const Studio = () => {
                     <img 
                       src={member.image} 
                       alt={member.name}
-                      className="w-48 h-48 mx-auto object-cover border border-white/10 grayscale hover:grayscale-0 transition-all duration-500"
+                      className="w-48 h-64 mx-auto object-cover border border-white/10 grayscale hover:grayscale-0 transition-all duration-500"
                     />
                   </div>
                   <h3 className="text-display text-xl font-medium mb-2">{member.name}</h3>

@@ -4,7 +4,6 @@ import ScrollIndicator from '@/components/ScrollIndicator';
 import Hero from '@/components/Hero';
 import ProjectGrid from '@/components/ProjectGrid';
 import Footer from '@/components/Footer';
-
 const Index = () => {
   return (
     <div className="min-h-screen bg-black text-white">

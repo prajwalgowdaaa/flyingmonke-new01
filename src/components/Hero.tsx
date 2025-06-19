@@ -17,7 +17,7 @@ const Hero = () => {
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
       const compressionPoint = windowHeight * 0.8;
-      
+
       setIsCompressed(scrollY > compressionPoint);
     };
 
@@ -28,8 +28,12 @@ const Hero = () => {
     };
   }, []);
 
+  const handleAnimationComplete = () => {
+    console.log('Animation completed!');
+  };
+
   return (
-    <section 
+    <section
       className={`relative min-h-screen flex flex-col justify-center items-center text-center transition-all duration-700 ${
         isCompressed ? 'hero-compressed' : ''
       }`}
@@ -38,8 +42,8 @@ const Hero = () => {
       {/* Interactive squares background for desktop only */}
       {!isMobile && (
         <div className="absolute inset-0 z-0">
-          <Squares 
-            speed={0.2} 
+          <Squares
+            speed={0.2}
             squareSize={40}
             direction='up' // up, down, left, right, diagonal
             borderColor='#141414'
@@ -56,15 +60,14 @@ const Hero = () => {
 
       {/* Main content */}
       <div className={`relative z-10 transition-all duration-700 px-6 ${isCompressed ? 'scale-50 opacity-70' : ''}`}>
+
         <h1 className="text-display text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-light mb-8 animate-fade-in-up">
           flying<span className="font-bold">monké</span>
         </h1>
-        
-        <p className="text-body text-sm sm:text-lg md:text-xl uppercase tracking-[0.2em] md:tracking-[0.3em] opacity-70 mb-12 animate-fade-in-up delay-300 max-w-4xl">
-          Architecture &bull; Interiors &bull; Experiments
-        </p>
-
-        <div className="w-px h-16 bg-white/30 mx-auto animate-fade-in delay-500" />
+        <div className="w-px h-20 bg-white/30 mx-auto animate-fade-in delay-500" />
+        <br></br>
+         <p className="text-2xl mb-8 text-center max-w-full mx-auto">
+ Architecture ◦ Interiors ◦ Experiments </p>
       </div>
 
       {/* Manifesto */}
