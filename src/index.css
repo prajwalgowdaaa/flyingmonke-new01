@@ -1,0 +1,267 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Monochrome design system for flyingmonké */
+@layer base {
+  :root {
+    /* Monochrome palette */
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-gray-light: #aaaaaa;
+    --color-gray-mid: #666666;
+    --color-gray-dark: #333333;
+    
+    /* Design system colors */
+    --background: 0 0% 0%; /* Pure black */
+    --foreground: 0 0% 100%; /* Pure white */
+
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 67%;
+
+    --accent: 0 0% 20%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 0% 100%;
+
+    --radius: 0.25rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    cursor: none; /* Custom cursor */
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Custom cursor */
+  .custom-cursor {
+    @apply fixed pointer-events-none z-50 w-6 h-6 border border-white rounded-full;
+    left: -12px;
+    top: -12px;
+    transition: transform 0.1s ease-out, width 0.2s ease-out, height 0.2s ease-out, border-width 0.2s ease-out;
+    mix-blend-mode: difference;
+  }
+
+  .custom-cursor.hover {
+    @apply w-12 h-12 border-2;
+    left: -24px;
+    top: -24px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+
+  /* Hide cursor on mobile */
+  @media (max-width: 768px) {
+    body {
+      cursor: auto !important;
+    }
+    
+    .custom-cursor {
+      display: none;
+    }
+  }
+
+  /* Text selection */
+  ::selection {
+    @apply bg-white text-black;
+  }
+
+  /* Skip to content */
+  .skip-to-content {
+    @apply absolute -top-40 left-6 bg-white text-black px-4 py-2 z-50 transition-all duration-300;
+  }
+
+  .skip-to-content:focus {
+    @apply top-6;
+  }
+
+  /* Focus styles */
+  .focus-visible\:outline-custom:focus-visible {
+    @apply outline-2 outline-white outline-offset-4;
+  }
+
+  /* Enhanced animated grainy gradient */
+  .grain-texture {
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(255,255,255,0.08) 25%, transparent 26%),
+      radial-gradient(circle at 75% 75%, rgba(255,255,255,0.06) 25%, transparent 26%),
+      radial-gradient(circle at 50% 50%, rgba(255,255,255,0.04) 25%, transparent 26%),
+      linear-gradient(45deg, rgba(255,255,255,0.02) 25%, transparent 26%);
+    background-size: 12px 12px, 16px 16px, 8px 8px, 20px 20px;
+    animation: grain 15s linear infinite;
+  }
+
+  /* Bento grid cards */
+  .bento-card {
+    @apply relative overflow-hidden bg-white/5 border border-white/10 transition-all duration-500 cursor-pointer;
+    filter: grayscale(1);
+  }
+
+  .bento-card:hover {
+    @apply border-white/30 bg-white/10;
+    filter: grayscale(0);
+    transform: scale(1.02);
+  }
+
+  /* Hero compression effect */
+  .hero-compressed {
+    @apply fixed top-0 left-0 right-0 h-16 z-40;
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  /* Scroll indicator */
+  .scroll-indicator {
+    @apply fixed top-0 left-0 h-0.5 bg-white z-50;
+    transition: width 0.1s ease-out;
+  }
+
+  /* Typography */
+  .text-display {
+    @apply font-display font-light leading-tight tracking-tight;
+  }
+
+  .text-body {
+    @apply font-body leading-relaxed;
+  }
+
+  /* Mobile optimizations */
+  @media (max-width: 768px) {
+    .text-display {
+      line-height: 1.2;
+    }
+    
+    .hero-compressed {
+      height: 4rem;
+    }
+  }
+}
+
+@layer utilities {
+  /* Layout utilities */
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .absolute-center {
+    @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+  }
+
+  /* Text utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Animation delays */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+}
+
+@keyframes grain {
+  0%, 100% { 
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  25% { 
+    transform: translate(-5px, -5px) rotate(90deg);
+    opacity: 0.8;
+  }
+  50% { 
+    transform: translate(5px, -10px) rotate(180deg);
+    opacity: 1;
+  }
+  75% { 
+    transform: translate(-10px, 5px) rotate(270deg);
+    opacity: 0.9;
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { 
+    background-position: 0% 50%;
+    background-size: 200% 200%;
+  }
+  25% { 
+    background-position: 100% 50%;
+    background-size: 250% 250%;
+  }
+  50% { 
+    background-position: 50% 100%;
+    background-size: 300% 300%;
+  }
+  75% { 
+    background-position: 50% 0%;
+    background-size: 250% 250%;
+  }
+}
+
+.animate-gradient-shift {
+  background-size: 400% 400%;
+  animation: gradient-shift 25s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
