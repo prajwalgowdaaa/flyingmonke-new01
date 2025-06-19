@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import DotGrid from './DotGrid';
+import Squares from './Squares';
 
 const Hero = () => {
   const [isCompressed, setIsCompressed] = useState(false);
@@ -35,23 +35,23 @@ const Hero = () => {
       }`}
       aria-label="Hero section"
     >
-      {/* Interactive dot grid background for desktop only */}
+      {/* Interactive squares background for desktop only */}
       {!isMobile && (
-        <DotGrid
-          dotSize={8}
-          gap={20}
-          baseColor="#333333"
-          activeColor="#ffffff"
-          proximity={80}
-          shockRadius={200}
-          shockStrength={3}
-          className="opacity-40"
-        />
+        <div className="absolute inset-0 z-0">
+          <Squares 
+            speed={0.2} 
+            squareSize={40}
+            direction='up' // up, down, left, right, diagonal
+            borderColor='#141414'
+            hoverFillColor='#222'
+            className="opacity-20"
+          />
+        </div>
       )}
 
       {/* Static dark background for mobile */}
       {isMobile && (
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-800 via-black to-gray-900" />
+        <div className="absolute inset-0 bg-black z-0" />
       )}
 
       {/* Main content */}
@@ -68,7 +68,7 @@ const Hero = () => {
       </div>
 
       {/* Manifesto */}
-      <div className={`absolute bottom-20 left-1/2 transform -translate-x-1/2 transition-all duration-700 px-6 ${
+      <div className={`absolute bottom-20 left-1/2 transform -translate-x-1/2 transition-all duration-700 px-6 z-10 ${
         isCompressed ? 'opacity-0 translate-y-4' : 'opacity-100'
       }`}>
         <p className="text-display text-xl sm:text-2xl md:text-3xl font-light leading-tight max-w-4xl mx-auto text-balance animate-fade-in-up delay-700">
@@ -77,7 +77,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-pulse transition-all duration-700 ${
+      <div className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-pulse transition-all duration-700 z-10 ${
         isCompressed ? 'opacity-0' : 'opacity-50'
       }`}>
         <div className="w-6 h-10 border border-white/50 rounded-full flex justify-center">
