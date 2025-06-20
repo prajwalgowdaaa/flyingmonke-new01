@@ -113,7 +113,7 @@ const Projects = () => {
               Projects
             </h1>
             <p className="text-body text-lg md:text-xl opacity-70 mb-12 animate-fade-in-up delay-200 leading-relaxed">
-              Each project is a dialogue between space, light, and human experience.
+            Our portfolio spans residences, institutional spaces, mixed - use, and experimental interventions — all unified by a sensitivity to material, light, and human emotion.
             </p>
           </div>
         </section>
@@ -128,7 +128,7 @@ const Projects = () => {
                   placeholder="Search projects..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full px-4 py-3 bg-transparent border border-white/30 focus:border-white focus:outline-none transition-colors"
+                  className="w-64 px-4 py-3 bg-transparent border border-white/30 focus:border-white focus:outline-none transition-colors"
                 />
               </div>
               <div className="flex flex-wrap gap-4">
@@ -200,7 +200,7 @@ const Projects = () => {
                     <img 
                       src={project.image} 
                       alt={project.title}
-                      className="w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity duration-500"
+                      className="w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
                     />
                   </div>
 

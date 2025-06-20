@@ -45,7 +45,7 @@ const ProjectGrid = () => {
             <img 
               src={project.image} 
               alt={project.title}
-              className="w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity duration-500"
+              className="w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
             />
           </div>
 

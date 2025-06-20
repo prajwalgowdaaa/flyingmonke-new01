@@ -86,7 +86,7 @@ const Insights = () => {
               Insights
             </h1>
             <p className="text-body text-lg md:text-xl opacity-70 mb-12 animate-fade-in-up delay-200 leading-relaxed">
-              Thoughts, observations, and discoveries from our journey in architecture and design.
+            We share our reflections on architecture, culture, and materiality — from lessons on site to explorations of the future. Subscribe to join our dialogue.
             </p>
           </div>
         </section>
@@ -101,7 +101,7 @@ const Insights = () => {
                   placeholder="Search insights..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full px-4 py-3 bg-transparent border border-white/30 focus:border-white focus:outline-none transition-colors text-white placeholder-white/50"
+                  className="w-64 px-4 py-3 bg-transparent border border-white/30 focus:border-white focus:outline-none transition-colors text-white placeholder-white/50"
                 />
               </div>
               <div className="flex flex-wrap gap-4">

@@ -118,7 +118,7 @@ const Footer = () => {
             © 2024 flyingmonké. All Rights Reserved.
           </div>
           <div className="text-sm opacity-70">
-            Crafted with passion in India
+            Made with love in India
           </div>
         </div>
       </div>

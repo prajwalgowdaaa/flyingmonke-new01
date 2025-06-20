@@ -11,12 +11,12 @@ const Studio = () => {
       image: "https://images.pexels.com/photos/32193076/pexels-photo-32193076.jpeg?auto=compress"
     },
     {
-      name: "Suhas",
+      name: "Suhas Acharya",
       role: "Architect",
       image: "https://images.pexels.com/photos/32388468/pexels-photo-32388468.jpeg?auto=compress"
     },
     {
-      name: "Sakshi",
+      name: "Sakshi Pandey",
       role: "Architect",
       image: "https://images.pexels.com/photos/32388223/pexels-photo-32388223.jpeg?auto=compress"
     }
@@ -36,7 +36,7 @@ const Studio = () => {
               Our Studio
             </h1>
             <p className="text-body text-lg md:text-xl opacity-70 mb-12 animate-fade-in-up delay-200 leading-relaxed">
-              We are a collective of dreamers, builders, and storytellers who believe that architecture has the power to transform lives and communities.
+            At FlyingMonké, every design is rooted in listening deeply — to place, people, and potential. We balance intuitive storytelling with practical solutions.
             </p>
           </div>
         </section>
@@ -81,7 +81,7 @@ const Studio = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               <div className="text-center animate-fade-in-up delay-200">
                 <div className="w-16 h-16 border border-white/30 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl">01</span>
+                  <span className="text-2xl">👂</span>
                 </div>
                 <h3 className="text-display text-xl font-medium mb-4">Listen</h3>
                 <p className="text-body opacity-70 text-sm leading-relaxed">
@@ -90,7 +90,7 @@ const Studio = () => {
               </div>
               <div className="text-center animate-fade-in-up delay-400">
                 <div className="w-16 h-16 border border-white/30 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl">02</span>
+                  <span className="text-2xl">🧠</span>
                 </div>
                 <h3 className="text-display text-xl font-medium mb-4">Experiment</h3>
                 <p className="text-body opacity-70 text-sm leading-relaxed">
@@ -99,7 +99,7 @@ const Studio = () => {
               </div>
               <div className="text-center animate-fade-in-up delay-600">
                 <div className="w-16 h-16 border border-white/30 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl">03</span>
+                  <span className="text-2xl">🖌️</span>
                 </div>
                 <h3 className="text-display text-xl font-medium mb-4">Craft</h3>
                 <p className="text-body opacity-70 text-sm leading-relaxed">

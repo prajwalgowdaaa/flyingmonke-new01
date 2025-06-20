@@ -75,7 +75,7 @@ const Hero = () => {
         isCompressed ? 'opacity-0 translate-y-4' : 'opacity-100'
       }`}>
         <p className="text-display text-xl sm:text-2xl md:text-3xl font-light leading-tight max-w-4xl mx-auto text-balance animate-fade-in-up delay-700">
-          Architecting culture through crafted spatial stories.
+        We are a Bengaluru-based design studio crafting architecture and interiors that blur the boundaries between human, story, and space.
         </p>
       </div>
 

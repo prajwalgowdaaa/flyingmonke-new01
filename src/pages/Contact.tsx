@@ -114,7 +114,7 @@ const Contact = () => {
                         href="https://www.instagram.com/flyingmonke__/" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="p-3 border border-white/20 hover:border-white hover:bg-white hover:text-black transition-all duration-300 cursor-hover"
+                        className="p-3 border hover:border-grey hover:bg-white hover:text-black transition-all duration-300 cursor-hover"
                         aria-label="Instagram"
                       >
                         <Instagram size={20} />

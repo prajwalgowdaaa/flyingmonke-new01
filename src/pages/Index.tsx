@@ -40,7 +40,7 @@ const Index = () => {
           
           <div className="max-w-4xl mx-auto text-center">
             <blockquote className="text-display text-2xl sm:text-3xl md:text-4xl font-light leading-relaxed mb-12 animate-fade-in-up">
-              "Architecture is not about form following function—it's about creating spaces that make people feel more human."
+              "Architecture begins where function ends — in the quiet emotion a space can evoke."
             </blockquote>
             
             <div className="w-16 h-px bg-white/30 mx-auto mb-8 animate-fade-in-up delay-300" />
@@ -57,7 +57,7 @@ const Index = () => {
           
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-display text-3xl md:text-4xl font-light mb-8 animate-fade-in-up">
-              Let's Create Something
+            Let’s build more than just Walls
             </h2>
             
             <a 
