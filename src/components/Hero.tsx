@@ -59,7 +59,7 @@ const Hero = () => {
       )}
 
       {/* Main content */}
-      <div className={`relative z-10 transition-all duration-700 px-6 ${isCompressed ? 'scale-50 opacity-70' : ''}`}>
+      <div className={`relative z-10 transition-all duration-700 px-6 ${isCompressed ? 'scale-50 opacity-70' : ''} flex flex-col justify-center items-center`}>
 
         <h1 className="text-display text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-light mb-8 animate-fade-in-up">
           flying<span className="font-bold">monké</span>
@@ -68,14 +68,12 @@ const Hero = () => {
         <br></br>
          <p className="text-2xl mb-8 text-center max-w-full mx-auto">
  Architecture ◦ Interiors ◦ Experiments </p>
-      </div>
-
-      {/* Manifesto */}
-      <div className={`absolute bottom-20 left-1/2 transform -translate-x-1/2 transition-all duration-700 px-6 z-10 ${
-        isCompressed ? 'opacity-0 translate-y-4' : 'opacity-100'
-      }`}>
-        <p className="text-display text-xl sm:text-2xl md:text-3xl font-light leading-tight max-w-4xl mx-auto text-balance animate-fade-in-up delay-700">
-        We are a Bengaluru-based design studio crafting architecture and interiors that blur the boundaries between human, story, and space.
+        
+        {/* Manifesto */}
+        <p className={`text-display text-xl sm:text-2xl md:text-3xl font-light leading-tight max-w-4xl mx-auto text-balance animate-fade-in-up delay-700 mt-8 ${
+          isCompressed ? 'opacity-0 translate-y-4' : 'opacity-100'
+        }`}>
+          We are a Bengaluru-based design studio crafting architecture and interiors that blur the boundaries between human, story, and space.
         </p>
       </div>
 

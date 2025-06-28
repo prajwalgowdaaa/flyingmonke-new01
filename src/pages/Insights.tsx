@@ -4,6 +4,9 @@ import Navigation from '@/components/Navigation';
 import CustomCursor from '@/components/CustomCursor';
 import ScrollIndicator from '@/components/ScrollIndicator';
 import Footer from '@/components/Footer';
+import MagnetLines from '@/components/MagnetLines';
+
+// import Cubes from '@/components/Cubes'; // Removed Cubes import
 
 interface Article {
   id: number;
@@ -80,8 +83,20 @@ const Insights = () => {
       
       <main id="main-content" className="relative pt-24">
         {/* Hero Section */}
-        <section className="py-20 px-6">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="relative py-20 px-6 overflow-hidden">
+                    <div className="absolute inset-0 z-0 flex items-center opacity-10">
+            <MagnetLines
+              rows={9}
+              columns={20}
+              // containerSize="60vmin" // Removed this prop to use default 100%
+              lineColor="#363636"
+              lineWidth="0.3vmin"
+              lineHeight="3vmin"
+              baseAngle={45}
+              style={{ width: '100%', height: '100%' }} // Ensure it fills the parent div
+            />
+            </div>
+          <div className="max-w-4xl mx-auto text-center relative z-10">
             <h1 className="text-display text-4xl md:text-6xl font-light mb-8 animate-fade-in-up">
               Insights
             </h1>
@@ -115,7 +130,7 @@ const Insights = () => {
                 >
                   All
                 </button>
-                {allTags.map((tag) => (
+                {allTags.map(tag => (
                   <button
                     key={tag}
                     onClick={() => setSelectedTag(tag)}
